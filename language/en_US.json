@@ -1,0 +1,5 @@
+{
+	"plugin.workflow-utils.name": "Workflow Utils",
+	"workflow.plugin.workflow-utils.step.delay.name": "Delay",
+	"workflow.plugin.workflow-utils.step.delay.option.duration.name": "Duration"
+}
