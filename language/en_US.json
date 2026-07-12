@@ -1,5 +1,10 @@
 {
 	"plugin.workflow-utils.name": "Workflow Utils",
 	"workflow.plugin.workflow-utils.step.delay.name": "Delay",
-	"workflow.plugin.workflow-utils.step.delay.option.duration.name": "Duration"
+	"workflow.plugin.workflow-utils.step.delay.option.duration.name": "Duration",
+	"workflow.plugin.workflow-utils.step.cooldown.name": "Cooldown",
+	"workflow.plugin.workflow-utils.step.cooldown.option.days.name": "Days",
+	"workflow.plugin.workflow-utils.step.cooldown.option.hours.name": "Hours",
+	"workflow.plugin.workflow-utils.step.cooldown.option.minutes.name": "Minutes",
+	"workflow.plugin.workflow-utils.step.cooldown.option.seconds.name": "Seconds"
 }
