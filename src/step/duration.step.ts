@@ -21,10 +21,9 @@ export class DurationStep extends Step {
 
 				const start = Date.now();
 				const durationMs = duration * 1000;
+				ctx.updateProgress(0);
 
 				await new Promise<void>((resolve) => {
-					ctx.updateProgress(0);
-
 					const intervalId = setInterval(() => {
 						const elapsed = Date.now() - start;
 						ctx.updateProgress(elapsed / durationMs);

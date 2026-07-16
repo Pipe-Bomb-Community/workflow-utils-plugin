@@ -2,6 +2,7 @@ import type PipeBomb from "@sdk";
 import { Step } from "./step/step.js";
 import { DurationStep } from "./step/duration.step.js";
 import { CooldownStep } from "./step/cooldown.step.js";
+import { FailStep } from "./step/fail.step.js";
 
 export default class Plugin implements PipeBomb.Plugin {
 	private api!: PipeBomb.PluginApiContext;
@@ -14,7 +15,11 @@ export default class Plugin implements PipeBomb.Plugin {
 		this.api.registerLanguageDirectory("language");
 
 		const workflowClient = this.api.getWorkflowClient();
-		const STEPS: Step[] = [new DurationStep(), new CooldownStep()];
+		const STEPS: Step[] = [
+			new DurationStep(),
+			new CooldownStep(),
+			new FailStep(),
+		];
 
 		for (const step of STEPS) {
 			workflowClient.registerStep(step.get());
