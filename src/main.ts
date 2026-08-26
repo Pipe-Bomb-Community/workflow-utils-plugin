@@ -1,4 +1,4 @@
-import type PipeBomb from "@sdk";
+import type PipeBomb from "@pipe-bomb/plugin-sdk";
 import { Step } from "./step/step.js";
 import { DurationStep } from "./step/duration.step.js";
 import { CooldownStep } from "./step/cooldown.step.js";

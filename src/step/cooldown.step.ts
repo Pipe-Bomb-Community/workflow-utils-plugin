@@ -1,4 +1,4 @@
-import { WorkflowStep } from "@sdk";
+import { WorkflowStep } from "@pipe-bomb/plugin-sdk";
 import { Step } from "./step.js";
 
 export class CooldownStep extends Step {
