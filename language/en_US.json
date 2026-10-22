@@ -57,6 +57,7 @@
 	"workflow.plugin.workflow-utils.step.pause-trigger.option.event.enum.pause": "Pause",
 	"workflow.plugin.workflow-utils.step.pause-trigger.option.event.enum.unpause": "Unpause",
 	"workflow.plugin.workflow-utils.step.pause-trigger.option.event.enum.any": "Any",
+	"workflow.plugin.workflow-utils.step.pause-trigger.option.rerun.name": "Repeat if already running",
 
 	"workflow.plugin.workflow-utils.step.pause.name": "Pause",
 	"workflow.plugin.workflow-utils.step.pause.option.id.name": "Pause ID",

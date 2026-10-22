@@ -37,9 +37,33 @@ export class PauseTrigger extends Step {
 						},
 					],
 				},
+				{
+					id: "rerun",
+					type: "boolean",
+				},
 			],
 			create: (ctx) => {
-				return () => {};
+				const id = ctx.getOption("id", "string");
+				const type = ctx.getOption("event", "enum", [
+					"pause",
+					"unpause",
+					"any",
+				]);
+				if (!id || !type) {
+					return () => {};
+				}
+
+				const allowReruns = !!ctx.getOption("rerun", "boolean");
+
+				return this.pauseIndex.onChange(id, (paused) => {
+					if (
+						type == "any" ||
+						(type == "pause" && paused) ||
+						(type == "unpause" && !paused)
+					) {
+						ctx.activate(allowReruns);
+					}
+				});
 			},
 		};
 	}
